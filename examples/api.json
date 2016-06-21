@@ -1,0 +1,13 @@
+{
+  "Posts": {
+    "get":          "/posts/:id",
+    "post":         "/posts",
+    "put":          "/posts/:id",
+    "patch":        "/posts/:id",
+    "delete":       "/posts/:id",
+    "getByUserId": ["/posts?userId=:userId", {"method": "GET"}],
+    "Comments": {
+      "get":  "/posts/:id/comments"
+    }
+  }
+}
