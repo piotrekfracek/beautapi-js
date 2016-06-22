@@ -53,7 +53,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/karma start test/karma.conf.js --single-run --browsers Firefox,PhantomJS",
+    "test": "node ./test/server.js & node_modules/.bin/karma start test/karma.conf.js --single-run --browsers Firefox,PhantomJS",
     "test:server": "node ./test/server.js",
     "test:local": "node_modules/.bin/karma start test/karma.conf.js",
     "test:watch": "node_modules/.bin/karma start test/karma.conf.js --auto-watch --no-single-run",
