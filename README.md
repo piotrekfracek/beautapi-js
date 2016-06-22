@@ -2,7 +2,9 @@
 
 Manage your endpoints in elegant way. Built on top of [fetch](https://fetch.spec.whatwg.org/).
 
-![https://img.shields.io/npm/v/beautapi.svg](https://img.shields.io/npm/v/beautapi.svg)
+![https://img.shields.io/npm/v/beautapi.svg](https://img.shields.io/npm/v/beautapi.svg)[![Bower](https://img.shields.io/bower/v/beautapi.svg?maxAge=2592000)]()
+
+Beautapi is a small library that allows you to keep all endpoints in a single place and use them with pleasure. All you have to do is write down paths and configure api to your needs.
 
 ## Installation
 
