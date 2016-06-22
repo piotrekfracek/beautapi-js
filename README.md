@@ -22,8 +22,6 @@ bower install beautapi
 
 ## Getting started
 
-### Node, Webpack, etc:
-
 ```javascript
 const Beautapi = require("beautapi");
 const Fetch = require("node-fetch"); // NODE ENV: Node doesn't have window.fetch method.*
@@ -37,7 +35,7 @@ const model = {
     }
 };
 
-// Configure beautapi
+// Configure Beautapi
 const config = {
     endpointPrefix: "http://api.myserver.com",
     fetchReference: Fetch,
@@ -56,17 +54,31 @@ Api.Movies.get({id: 12}).then();
 Api.Movies.create({}, {
     body: {name: "Titanic"}
 }.then();
+                  
+// Use it with class, like a boss
+class MovieClass {
+    constructor({id, title, year}) {
+    	this.id = id;
+     	this.title = title;
+    	this.year = year;
+    }
+    getTitle() {
+        return this.title;
+    }
+}
+Api.Movies.get({id: 10})
+    .then(Beautapi.helpers.decorateTo(MovieClass))
+    .then((movie) => { console.log(movie.getTitle()) })
+    .catch((err) =>  { console.error(err) })
 ```
 
 *The most of modern browsers have fetch method, but it's good idea to provide polyfill (for example https://github.com/github/fetch). If you want to run beautapi in node enviroment you have to provide special node-fetch polyfill.
 
-#### [**LIVE EXAMPLE**](https://tonicdev.com/piotrekfracek/beautapi-example)
+#### Live examples
 
-### Bower
+[**Node**](https://tonicdev.com/piotrekfracek/beautapi-example)
 
-```html
-//TODO
-```
+[**Script tag**](http://jsbin.com/dikilureje/edit?html,js,console)
 
 
 
