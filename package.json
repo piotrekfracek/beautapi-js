@@ -1,6 +1,6 @@
 {
   "name": "beautapi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Manage your endpoints in elegant way. Built on top of fetch.",
   "main": "dist/beautapi-node.min.js",
   "directories": {
