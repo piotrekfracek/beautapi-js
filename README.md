@@ -74,7 +74,7 @@ Api.Movies.get({id: 10})
     .catch((err) =>  { console.error(err) })
 ```
 
-*The most of modern browsers have fetch method, but it's good idea to provide polyfill (for example https://github.com/github/fetch). If you want to run beautapi in node enviroment you have to provide special node-fetch polyfill.
+*Most of modern browsers have fetch method, but it's a good idea to provide polyfill (for example https://github.com/github/fetch). If you want to run beautapi in node enviroment you have to provide special node-fetch polyfill.
 
 #### Live examples
 
@@ -114,7 +114,7 @@ const Api = Beautapi.parse({
 // Api.Posts.Comments.get({id: 53}).then((response) => { ... })
 ```
 
-If leaf is a string beautapi will create reuqest method using value as path and key as a method (case innsensitive) and name. It will match methods like "DELETE", "GET", "HEAD", "OPTIONS", "POST", "PUT", "PATCH. Otherwise "GET" will be used.
+If leaf is a string beautapi will create reuqest method using value as path and key as a method (case innsensitive) and name. It will match methods like "DELETE", "GET", "HEAD", "OPTIONS", "POST", "PUT", "PATCH". Otherwise "GET" will be used.
 
 If leaf is an array beautapi will create request method using first value as path, second value as fetch config and key as a name.
 
@@ -294,3 +294,14 @@ class Post {
 API.Posts.get({id: 1}).then(Beautapi.helpers.decorateTo(Post))
 ```
 
+
+
+## License
+
+**ISC**
+
+Copyright (c) 2016, Piotr Frącek
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
